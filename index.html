@@ -320,7 +320,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 <option value="apr">📅 April 2026 (Apr 1 – Apr 30)</option>
 <option value="may">📅 May 2026 (May 1 – May 31)</option>
 <option value="jun">📅 June 2026 (Jun 1 – Jun 30)</option>
-      <option value="jul" selected>📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
+      <option value="jul">📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
+      <option value="aug" selected>📅 August 2026 (Aug 1 – Aug 31)</option>
     </select>
   </div>
 </div>
@@ -344,8 +345,9 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 <option value="apr">📅 April 2026 (Apr 1 – Apr 30)</option>
 <option value="may">📅 May 2026 (May 1 – May 31)</option>
 <option value="jun">📅 June 2026 (Jun 1 – Jun 30)</option>
-        <option value="jul" selected>📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
-      </select>
+        <option value="jul">📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
+      <option value="aug" selected>📅 August 2026 (Aug 1 – Aug 31)</option>
+    </select>
     </div>
     <nav class="sidebar-nav">
       <div class="nav-section">Overview</div>
@@ -382,7 +384,7 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
         </div>
         <div class="kpi-card">
           <div class="kpi-icon green"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
-          <div class="kpi-card-body"><div class="kpi-meta">New Followers</div><div class="kpi-value" id="kpiFol">—</div><div class="kpi-footer"><span class="kpi-tag green" id="kpiFolTag">Total: 6,471</span><div class="kpi-spark-wrap"><div class="kpi-spark-label" id="sl3">—</div><canvas id="spark3"></canvas></div></div></div>
+          <div class="kpi-card-body"><div class="kpi-meta">New Followers</div><div class="kpi-value" id="kpiFol">—</div><div class="kpi-footer"><span class="kpi-tag green" id="kpiFolTag">Total: 6,762</span><div class="kpi-spark-wrap"><div class="kpi-spark-label" id="sl3">—</div><canvas id="spark3"></canvas></div></div></div>
         </div>
       </div>
     </div>
@@ -391,8 +393,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <div class="hb-top">
         <div class="hb-left">
           <div class="hb-eyebrow">Total Followers</div>
-          <div class="hb-number">6,471</div>
-          <div class="hb-sub">As of <span id="followersAsOf">Jul 31, 2026</span></div>
+          <div class="hb-number">6,762</div>
+          <div class="hb-sub">As of <span id="followersAsOf">Aug 31, 2026</span></div>
         </div>
         <div class="hb-stats">
           <div class="hb-stat"><div class="hb-stat-label">Impressions</div><div class="hb-stat-val" id="bImp">—</div><div class="hb-stat-sub" id="bImpS">—</div></div>
@@ -448,6 +450,29 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 // DATA — injected by Claude when building
 // ═══════════════════════════════════════
 const MONTHS = {
+  aug: {
+    label: "August 2026",
+    range: "Aug 1 – Aug 31, 2026",
+    labels: ["8/1", "8/2", "8/3", "8/4", "8/5", "8/6", "8/7", "8/8", "8/9", "8/10", "8/11", "8/12", "8/13", "8/14", "8/15", "8/16", "8/17", "8/18", "8/19", "8/20", "8/21", "8/22", "8/23", "8/24", "8/25", "8/26", "8/27", "8/28", "8/29", "8/30", "8/31"],
+    impressions: [795, 735, 8696, 1056, 2117, 4423, 15614, 1717, 976, 14358, 6503, 2618, 1449, 956, 719, 543, 1068, 382, 14166, 17157, 4525, 2217, 1291, 3581, 1757, 1494, 1048, 191, 184, 323, 767],
+    engagements: [12, 3, 105, 16, 39, 34, 89, 9, 1, 76, 13, 38, 18, 8, 5, 6, 35, 14, 90, 53, 34, 10, 1, 25, 29, 43, 12, 2, 6, 3, 13],
+    followers: [2, 5, 15, 14, 9, 11, 26, 2, 4, 42, 23, 9, 16, 4, 8, 2, 18, 27, 33, 33, 13, 8, 5, 13, 10, 3, 3, 5, 3, 4, 7],
+    totalImp: 113426, totalEng: 842, totalFol: 377,
+    peakDay: "Aug 20", peakVal: "17,157",
+    impTagClass: "amber", impTagText: "🔥 Strong month",
+    audience: {
+      locations: [{name:"Mumbai Metropolitan Region",pct:24.0},{name:"Greater Delhi Area",pct:12.0},{name:"Greater Bengaluru Area",pct:10.0},{name:"Muscat",pct:4.0},{name:"Greater Hyderabad Area",pct:3.0}],
+      seniority: [{name:"Senior",pct:29.0,color:"#6366F1"},{name:"Director",pct:15.0,color:"#10B981"},{name:"Entry",pct:11.0,color:"#F59E0B"},{name:"VP",pct:10.0,color:"#EF4444"},{name:"CXO",pct:7.0,color:"#8B5CF6"}],
+      industries: [{name:"Banking",pct:17.0},{name:"Financial Services",pct:14.0},{name:"IT Services and IT Consulting",pct:9.0},{name:"Business Consulting and Services",pct:5.0},{name:"Hospitals and Health Care",pct:2.0}]
+    },
+    posts: [
+      {title:"LinkedIn Post · Aug 19, 2026",date:"Aug 19, 2026",imp:"37,341",badge:"green",url:"https://www.linkedin.com/posts/rajiv-mehta-banking-professional_crunches-burn-belly-fat-is-false-a-2011-share-7495703492196700160-8lF5"},
+      {title:"LinkedIn Post · Aug 10, 2026",date:"Aug 10, 2026",imp:"23,664",badge:"indigo",url:"https://www.linkedin.com/posts/rajiv-mehta-banking-professional_completely-clear-urine-means-you-are-perfectly-share-7492452597694431233-qGSB"},
+      {title:"LinkedIn Post · Aug 5, 2026",date:"Aug 5, 2026",imp:"19,195",badge:"indigo",url:"https://www.linkedin.com/posts/rajiv-mehta-banking-professional_almonds-do-not-improve-your-memory-the-share-7490633001056346112-o6f0"},
+      {title:"LinkedIn Post · Aug 3, 2026",date:"Aug 3, 2026",imp:"9,190",badge:"indigo",url:"https://www.linkedin.com/posts/rajiv-mehta-banking-professional_muscle-soreness-is-not-proof-of-a-successful-share-7489886670087983105-xKOy"},
+      {title:"LinkedIn Post · Aug 24, 2026",date:"Aug 24, 2026",imp:"5,998",badge:"indigo",url:"https://www.linkedin.com/posts/rajiv-mehta-banking-professional_natural-cigarettes-are-not-healthier-tobacco-share-7497522164120662016-71Ae"}
+    ]
+  },
   jul: {
     label: "July 2026",
     range: "Jul 1 – Jul 31, 2026",
@@ -587,7 +612,7 @@ const MONTHS = {
     ]
   }
 };
-const DEFAULT_MONTH = 'jul';
+const DEFAULT_MONTH = 'aug';
 
 // ═══════════════════════════════════════
 // CHARTS
